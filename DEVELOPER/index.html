@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michelle Wambaya | Technical Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --clay: #A52A2A; --sage: #8A9A5B; }
+        body { font-family: 'Montserrat', sans-serif; transition: background 0.3s; scroll-behavior: smooth; }
+        .dark { background-color: #121212; color: #f8fafc; }
+        .light { background-color: #fcfcfc; color: #0f172a; }
+
+        /* Full Background Pattern for Hero */
+        .hero-pattern {
+            background-image: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), url('6960805.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        .preview-frame {
+            width: 100%;
+            height: 200px;
+            border: 1px solid rgba(165, 42, 42, 0.3);
+            overflow: hidden;
+            position: relative;
+            background: #000;
+        }
+        .preview-frame iframe {
+            width: 1280px;
+            height: 800px;
+            transform: scale(0.16);
+            transform-origin: 0 0;
+            pointer-events: none;
+            opacity: 0.8;
+        }
+
+        h2 { font-size: 1.5rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.2em; color: var(--clay); }
+        .text-justify { text-align: justify; text-justify: inter-word; }
+    </style>
+</head>
+<body class="dark" id="theme-root">
+
+    <main>
+        <nav class="flex justify-between items-center px-12 py-10 sticky top-0 bg-slate-900/90 border-b border-white/5 z-50 backdrop-blur-md">
+            <div class="text-sm font-bold tracking-[0.4em] uppercase">Michelle Wambaya</div>
+            <div class="flex items-center gap-10">
+                <div class="hidden lg:flex gap-10 text-[10px] font-bold uppercase tracking-widest opacity-60">
+                    <a href="#about" class="hover:text-clay transition">Evolution</a>
+                    <a href="#projects" class="hover:text-clay transition">Systems</a>
+                    <a href="#education" class="hover:text-clay transition">Academy</a>
+                </div>
+                <button onclick="toggleTheme()" class="text-xs p-2 border border-white/10 hover:bg-clay transition"><i class="fas fa-adjust"></i></button>
+            </div>
+        </nav>
+
+        <section id="about" class="hero-pattern min-h-screen flex items-center px-10 md:px-24 py-20">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <h4 class="text-gold font-bold text-[10px] tracking-[0.5em] uppercase text-clay mb-6">Software Engineer & Economics Graduate</h4>
+                    <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-8">Logic <br> Meets <span class="text-white/30 italic">Code.</span></h1>
+                    
+                    <div class="space-y-6 text-sm font-light leading-relaxed opacity-90 text-justify">
+                        <p>I turn data into helpful insights and decisions. My background in <strong>B.Econ & Finance</strong> from Kenyatta University (2021-2025) provides me with a unique lens for technical problem-solving, specializing in IT for economics and research ethics.</p>
+                        <p>My journey into programming began in 2021 with rigorous self-study, mastering <strong>JavaScript</strong> by 2022 and transitioning into <strong>Python</strong> for Data Analysis in 2023. In 2024, I joined the <strong>ALX Software Engineering</strong> track via Holberton School, a program focused on technical excellence for women in Africa.</p>
+                        <p>As a <strong>Developer Consultant</strong> at EGA Tech Ltd, I build responsive web applications and backend APIs using <strong>Node.js and MySQL</strong>, collaborating directly with clients to troubleshoot JavaScript UX and implement robust features.</p>
+                    </div>
+
+                    <div class="flex gap-8 mt-12">
+                        <a href="https://github.com/MichelleWambaya" target="_blank" class="px-8 py-3 bg-clay text-white text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-clay transition">GitHub Repository</a>
+                        <a href="https://www.linkedin.com/in/michelle-wambaya/" target="_blank" class="px-8 py-3 border border-white/20 text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <img src="image2.png" class="w-full max-w-md mx-auto grayscale hover:grayscale-0 transition-all duration-1000 border-8 border-white/5 shadow-2xl" alt="M. Wambaya Profile">
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-32 px-10 md:px-24 bg-black/40">
+            <h2 class="mb-20 text-center">Technical Archives</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                
+                <div class="group border border-white/10 p-8 bg-white/5 hover:border-clay transition">
+                    <div class="preview-frame mb-8">
+                        <iframe src="https://kra-margin-analyzer-v6of.vercel.app/"></iframe>
+                    </div>
+                    <h3 class="font-bold text-xs uppercase mb-4 tracking-widest">KRA Margin Analyzer</h3>
+                    <p class="text-[11px] font-light opacity-50 mb-8 leading-relaxed">A specialized Fintech PWA for Kenyan SMEs to track profit after KRA/eTIMS obligations. Features M-Pesa STK mock flows and real-time tax impact analysis.</p>
+                    <a href="https://kra-margin-analyzer-v6of.vercel.app/" target="_blank" class="text-[10px] font-bold text-clay uppercase tracking-[0.2em] hover:underline">Launch Live Application</a>
+                </div>
+
+                <div class="group border border-white/10 p-8 bg-white/5 hover:border-clay transition">
+                    <div class="preview-frame mb-8">
+                        <iframe src="https://hustle-vault-2q8i.vercel.app/"></iframe>
+                    </div>
+                    <h3 class="font-bold text-xs uppercase mb-4 tracking-widest">Hustle-Vault</h3>
+                    <p class="text-[11px] font-light opacity-50 mb-8 leading-relaxed">Tax compliance tool for Kenyan gig workers. Developed to categorize M-Pesa transactions and calculate safe-to-spend amounts after tax deductions.</p>
+                    <a href="https://hustle-vault-2q8i.vercel.app/" target="_blank" class="text-[10px] font-bold text-clay uppercase tracking-[0.2em] hover:underline">Launch Live Application</a>
+                </div>
+
+                <div class="group border border-white/10 p-8 bg-white/5 hover:border-clay transition">
+                    <div class="preview-frame mb-8">
+                        <iframe src="https://health-vibe-app.vercel.app/"></iframe>
+                    </div>
+                    <h3 class="font-bold text-xs uppercase mb-4 tracking-widest">HealthVibe App</h3>
+                    <p class="text-[11px] font-light opacity-50 mb-8 leading-relaxed">Built with Next.js and Supabase, this modern web application enables users to discover and manage natural home remedies with an intuitive UI.</p>
+                    <a href="https://health-vibe-app.vercel.app/" target="_blank" class="text-[10px] font-bold text-clay uppercase tracking-[0.2em] hover:underline">Launch Live Application</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="education" class="py-32 px-10 md:px-24 relative overflow-hidden bg-white/5">
+            <img src="image.jpg" class="absolute right-0 bottom-0 w-80 md:w-[600px] opacity-10 pointer-events-none grayscale" alt="Graduation Background">
+            
+            <h2 class="mb-20">Academy & Trajectory</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                <div class="space-y-12">
+                    <div>
+                        <h4 class="font-bold text-sm uppercase mb-4 text-clay">BSc Economics & Finance</h4>
+                        <p class="text-[10px] tracking-widest opacity-40 mb-4 uppercase">Kenyatta University | 2021 - 2025</p>
+                        <p class="text-sm font-light leading-relaxed opacity-70">Focusing on IT for Economics and research ethics. This foundational degree ensures that every software solution I engineer is grounded in fiscal accuracy and ethical data handling.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="font-bold text-xs uppercase tracking-widest opacity-40">Current Specializations</h4>
+                        <ul class="text-[11px] font-bold uppercase tracking-[0.2em] space-y-6">
+                            <li class="flex items-center gap-4"><div class="w-1.5 h-1.5 bg-clay"></div> <div>Data Engineering | ALX (Current)</div></li>
+                            <li class="flex items-center gap-4"><div class="w-1.5 h-1.5 bg-clay"></div> <div>Data Analytics Capstone | ALX (2025)</div></li>
+                            <li class="flex items-center gap-4"><div class="w-1.5 h-1.5 bg-clay"></div> <div>AI for Developers | ALX (2025)</div></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-xs uppercase tracking-widest opacity-40 mb-8">Technical Journey</h4>
+                    <div class="space-y-8 text-xs font-light border-l border-white/10 pl-8">
+                        <div>
+                            <span class="text-clay font-black">2021 //</span> Self-study commencement (JavaScript Basics).
+                        </div>
+                        <div>
+                            <span class="text-clay font-black">2023 //</span> Python for Data Analysis & ALX Software Engineering Entry.
+                        </div>
+                        <div>
+                            <span class="text-clay font-black">2024 //</span> App Academy Full-stack JavaScript Bootcamp.
+                        </div>
+                        <div>
+                            <span class="text-clay font-black">2025 //</span> Kubernetes & Databricks Certifications.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="py-20 px-10 border-t border-white/5 bg-black/60 text-center">
+            <div class="flex justify-center gap-16 mb-12 text-[10px] font-black tracking-widest uppercase">
+                <a href="https://github.com/MichelleWambaya" target="_blank" class="hover:text-clay transition">Github</a>
+                <a href="https://www.linkedin.com/in/michelle-wambaya/" target="_blank" class="hover:text-clay transition">LinkedIn</a>
+                <a href="mailto:michellewambaya@gmail.com" class="hover:text-clay transition">Email</a>
+            </div>
+            <p class="text-[9px] tracking-[0.5em] uppercase opacity-20">© 2026 Michelle Wambaya | Nairobi, Kenya</p>
+        </footer>
+    </main>
+
+    <script>
+        function toggleTheme() {
+            const root = document.getElementById('theme-root');
+            root.classList.toggle('dark');
+            root.classList.toggle('light');
+        }
+    </script>
+</body>
+</html>
